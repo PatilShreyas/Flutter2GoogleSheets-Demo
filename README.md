@@ -2,9 +2,12 @@
 <img src="images/banner.png"/>
 </p>
 
+## You can try Web version of this app [here](https://patilshreyas.github.io/Flutter2GoogleSheets-Demo/demo/).
+
 # 📱 Flutter 💙 to Google Sheets🗎
 A Demo application which stores User feedback from ***Flutter application*** into ***Google Sheets*** using ***Google AppScript***.
 ### Show some :heart: and star the repo to support the project
+[![Try App](https://img.shields.io/badge/Web-RunApp-informational.svg)](https://patilshreyas.github.io/Flutter2GoogleSheets-Demo/demo/)
 [![GitHub stars](https://img.shields.io/github/stars/PatilShreyas/Flutter2GoogleSheets-Demo.svg?style=social&label=Star)](https://github.com/PatilShreyas/Flutter2GoogleSheets-Demo) [![GitHub forks](https://img.shields.io/github/forks/PatilShreyas/Flutter2GoogleSheets-Demo.svg?style=social&label=Fork)](https://github.com/PatilShreyas/Flutter2GoogleSheets-Demo/fork) [![GitHub watchers](https://img.shields.io/github/watchers/PatilShreyas/Flutter2GoogleSheets-Demo.svg?style=social&label=Watch)](https://github.com/PatilShreyas/Flutter2GoogleSheets-Demo) [![GitHub followers](https://img.shields.io/github/followers/PatilShreyas.svg?style=social&label=Follow)](https://github.com/PatilShreyas)
 [![Twitter Follow](https://img.shields.io/twitter/follow/imShreyasPatil.svg?style=social)](https://twitter.com/imShreyasPatil)
 [![Medium Article](https://img.shields.io/badge/@Medium-PatilShreyas-informational.svg)](https://medium.com/@patilshreyas)
@@ -34,6 +37,7 @@ samples, guidance on mobile development, and a full API reference.
 In flutter, when button is pressed, `HTTP` `GET` request is called on AppScript `URL` which retireves parameter from request and then appends row data in Google Sheets. Thus, data from flutter in inserted into Google Sheets.
 
 ## ⚡️ Results
+You can run this app on web [here](https://patilshreyas.github.io/Flutter2GoogleSheets-Demo/demo/)
 <p float="center">
   <img src="images/output.gif" height="350"/>
   <img src="images/sheet.PNG" height="190"/>
