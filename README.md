@@ -1,16 +1,11 @@
+# 📱 Flutter 💙 to Google Sheets🗎
+A Demo application which stores User feedback from ***Flutter application*** into ***Google Sheets*** using ***Google AppScript***.
+
 <p align="center">
 <img src="images/banner.png"/>
 </p>
 
 ## You can try Web version of this app [here](https://patilshreyas.github.io/Flutter2GoogleSheets-Demo/demo/).
-
-# 📱 Flutter 💙 to Google Sheets🗎
-A Demo application which stores User feedback from ***Flutter application*** into ***Google Sheets*** using ***Google AppScript***.
-### Show some :heart: and star the repo to support the project
-[![Try App](https://img.shields.io/badge/Web-RunApp-informational.svg)](https://patilshreyas.github.io/Flutter2GoogleSheets-Demo/demo/)
-[![GitHub stars](https://img.shields.io/github/stars/PatilShreyas/Flutter2GoogleSheets-Demo.svg?style=social&label=Star)](https://github.com/PatilShreyas/Flutter2GoogleSheets-Demo) [![GitHub forks](https://img.shields.io/github/forks/PatilShreyas/Flutter2GoogleSheets-Demo.svg?style=social&label=Fork)](https://github.com/PatilShreyas/Flutter2GoogleSheets-Demo/fork) [![GitHub watchers](https://img.shields.io/github/watchers/PatilShreyas/Flutter2GoogleSheets-Demo.svg?style=social&label=Watch)](https://github.com/PatilShreyas/Flutter2GoogleSheets-Demo) [![GitHub followers](https://img.shields.io/github/followers/PatilShreyas.svg?style=social&label=Follow)](https://github.com/PatilShreyas)
-[![Twitter Follow](https://img.shields.io/twitter/follow/imShreyasPatil.svg?style=social)](https://twitter.com/imShreyasPatil)
-[![Medium Article](https://img.shields.io/badge/@Medium-PatilShreyas-informational.svg)](https://medium.com/@patilshreyas)
 
 ## 💡 Introduction
 - [***Google Sheets***](https://docs.google.com/spreadsheets/) is a very powerful tool 🔥 if we look into deep in it. 
@@ -28,6 +23,13 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+### Show some :heart: and star the repo to support the project
+[![Try App](https://img.shields.io/badge/Web-RunApp-informational.svg)](https://patilshreyas.github.io/Flutter2GoogleSheets-Demo/demo/)
+[![GitHub stars](https://img.shields.io/github/stars/PatilShreyas/Flutter2GoogleSheets-Demo.svg?style=social&label=Star)](https://github.com/PatilShreyas/Flutter2GoogleSheets-Demo) [![GitHub forks](https://img.shields.io/github/forks/PatilShreyas/Flutter2GoogleSheets-Demo.svg?style=social&label=Fork)](https://github.com/PatilShreyas/Flutter2GoogleSheets-Demo/fork) [![GitHub watchers](https://img.shields.io/github/watchers/PatilShreyas/Flutter2GoogleSheets-Demo.svg?style=social&label=Watch)](https://github.com/PatilShreyas/Flutter2GoogleSheets-Demo) [![GitHub followers](https://img.shields.io/github/followers/PatilShreyas.svg?style=social&label=Follow)](https://github.com/PatilShreyas)
+[![Twitter Follow](https://img.shields.io/twitter/follow/imShreyasPatil.svg?style=social)](https://twitter.com/imShreyasPatil)
+[![Medium Article](https://img.shields.io/badge/@Medium-PatilShreyas-informational.svg)](https://medium.com/@patilshreyas)
+
 
 ## ⚡️ Project Files
 - [**Flutter Application**](lib/) - Flutter Application Code.
