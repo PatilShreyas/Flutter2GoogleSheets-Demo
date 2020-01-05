@@ -1,4 +1,7 @@
-![Banner](images/banner.png)
+<p align="center">
+<img src="images/banner.png"/>
+</p>
+
 # 📱 Flutter 💙 to Google Sheets🗎
 A Demo application which stores User feedback from ***Flutter application*** into ***Google Sheets*** using ***Google AppScript***.
 ### Show some :heart: and star the repo to support the project
