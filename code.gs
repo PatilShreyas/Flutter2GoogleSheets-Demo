@@ -1,13 +1,15 @@
-function doGet(request){
+function doPost(request){
   // Open Google Sheet using ID
   var sheet = SpreadsheetApp.openById("1OOArrqjOqmD4GiJOWlluZ4woTMH_qaV6RKv4JXnT3Hk");
   var result = {"status": "SUCCESS"};
   try{
-    // Get all Parameters
-    var name = request.parameter.name;
-    var email = request.parameter.email;
-    var mobileNo = request.parameter.mobileNo;
-    var feedback = request.parameter.feedback;
+    // Get body request
+    var bodyRequest = request.postData.contents;
+    var jsonBody = JSON.parse(bodyRequest);
+    var name = jsonBody.name;
+    var email = jsonBody.email;
+    var mobileNo = jsonBody.mobileNo;
+    var feedback = jsonBody.feedback;
     
     // Append data on Google Sheet
     var rowData = sheet.appendRow([name, email, mobileNo, feedback]);  
