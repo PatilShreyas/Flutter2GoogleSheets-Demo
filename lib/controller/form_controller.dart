@@ -1,5 +1,4 @@
 import 'dart:convert' as convert;
-import 'dart:convert';
 import 'package:http/http.dart' as http;
 import '../model/form.dart';
 
@@ -25,7 +24,7 @@ class FormController {
     try {
       await http.post(
         URL,
-        body: json.encode(feedbackForm.toJson()),
+        body: convert.json.encode(feedbackForm.toJson()),
       ).then((response) {
         callback(convert.jsonDecode(response.body)['status']);
       });
