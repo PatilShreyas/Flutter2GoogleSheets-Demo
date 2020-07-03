@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_sheets_app/feedback_list.dart';
+
 import 'controller/form_controller.dart';
 import 'model/form.dart';
 
@@ -27,7 +29,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   // Create a global key that uniquely identifies the Form widget
   // and allows validation of the form.
   //
@@ -49,53 +50,51 @@ class _MyHomePageState extends State<MyHomePage> {
     if (_formKey.currentState.validate()) {
       // If the form is valid, proceed.
       FeedbackForm feedbackForm = FeedbackForm(
-        nameController.text, 
-        emailController.text, 
-        mobileNoController.text, 
-        feedbackController.text
-      );
+          nameController.text,
+          emailController.text,
+          mobileNoController.text,
+          feedbackController.text);
 
-      FormController formController = FormController((String response) {
-          print("Response: $response");
-          if (response == FormController.STATUS_SUCCESS) {
-            // Feedback is saved succesfully in Google Sheets.
-            _showSnackbar("Feedback Submitted");
-          } else {
-            // Error Occurred while saving data in Google Sheets.
-            _showSnackbar("Error Occurred!");
-          }
-        }
-      );
-     
+      FormController formController = FormController();
+
       _showSnackbar("Submitting Feedback");
 
       // Submit 'feedbackForm' and save it in Google Sheets.
-      formController.submitForm(feedbackForm);
+      formController.submitForm(feedbackForm, (String response) {
+        print("Response: $response");
+        if (response == FormController.STATUS_SUCCESS) {
+          // Feedback is saved succesfully in Google Sheets.
+          _showSnackbar("Feedback Submitted");
+        } else {
+          // Error Occurred while saving data in Google Sheets.
+          _showSnackbar("Error Occurred!");
+        }
+      });
     }
   }
 
   // Method to show snackbar with 'message'.
   _showSnackbar(String message) {
-      final snackBar = SnackBar(content: Text(message));
-      _scaffoldKey.currentState.showSnackBar(snackBar); 
+    final snackBar = SnackBar(content: Text(message));
+    _scaffoldKey.currentState.showSnackBar(snackBar);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: _scaffoldKey,  
+      key: _scaffoldKey,
       resizeToAvoidBottomPadding: false,
       appBar: AppBar(
         title: Text(widget.title),
       ),
       body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              Form(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            Form(
                 key: _formKey,
-                child:
-                  Padding(padding: EdgeInsets.all(16),
+                child: Padding(
+                  padding: EdgeInsets.all(16),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
@@ -107,9 +106,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           }
                           return null;
                         },
-                        decoration: InputDecoration(
-                          labelText: 'Name'
-                        ),
+                        decoration: InputDecoration(labelText: 'Name'),
                       ),
                       TextFormField(
                         controller: emailController,
@@ -120,9 +117,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           return null;
                         },
                         keyboardType: TextInputType.emailAddress,
-                        decoration: InputDecoration(
-                          labelText: 'Email'
-                        ),
+                        decoration: InputDecoration(labelText: 'Email'),
                       ),
                       TextFormField(
                         controller: mobileNoController,
@@ -146,23 +141,31 @@ class _MyHomePageState extends State<MyHomePage> {
                           return null;
                         },
                         keyboardType: TextInputType.multiline,
-                        decoration: InputDecoration(
-                          labelText: 'Feedback'
-                        ),
+                        decoration: InputDecoration(labelText: 'Feedback'),
                       ),
                     ],
                   ),
-                ) 
-              ),
-              RaisedButton(
-                color: Colors.blue,
-                textColor: Colors.white,
-                onPressed:_submitForm,
-                child: Text('Submit Feedback'),
-              ),
-            ],
-          ),
+                )),
+            RaisedButton(
+              color: Colors.blue,
+              textColor: Colors.white,
+              onPressed: _submitForm,
+              child: Text('Submit Feedback'),
+            ),
+            RaisedButton(
+              color: Colors.lightBlueAccent,
+              textColor: Colors.black,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => FeedbackListScreen()),
+                );
+              },
+              child: Text('View Feedback'),
+            ),
+          ],
         ),
+      ),
     );
   }
 }
