@@ -157,9 +157,10 @@ class _MyHomePageState extends State<MyHomePage> {
               textColor: Colors.black,
               onPressed: () {
                 Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => FeedbackListScreen()),
-                );
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => FeedbackListScreen(),
+                    ));
               },
               child: Text('View Feedback'),
             ),
