@@ -44,11 +44,21 @@ When `GET` request is sent to the same URL, it returns the List of feedback resp
 
 ## ⚡️ Results
 You can run this app on web [here](https://patilshreyas.github.io/Flutter2GoogleSheets-Demo/demo/)
-<p float="center">
-  <img src="images/output.gif" height="350"/>
-  <img src="images/responses.PNG" height="350"/>
-  <img src="images/sheet.PNG" height="190"/>
-</p>
+
+<table style="width:100%">
+  <tr>
+    <th>Main Feedback Form</th>
+    <th>Feedback Responses List</th> 
+  </tr>
+  <tr>
+    <td><img src="images/output.gif"/></td>
+    <td><img src="images/responses.PNG"/></td> 
+  </tr>
+</table>
+
+**Google Sheet Preview:**:
+
+<img src="images/sheet.PNG"/>
 
 As you can see, In first image, When *Submit Feedback* button is Clicked then that feedback is stored in *Google Sheet* as in Second image.
 Hurrah!😍 thus we have successfully implemented Google Sheets with Flutter.
