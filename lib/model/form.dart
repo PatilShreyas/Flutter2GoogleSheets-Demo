@@ -8,8 +8,12 @@ class FeedbackForm {
   FeedbackForm(this.name, this.email, this.mobileNo, this.feedback);
 
   factory FeedbackForm.fromJson(dynamic json) {
-    return FeedbackForm("${json['name']}", "${json['email']}",
-        "${json['mobileNo']}", "${json['feedback']}");
+    return FeedbackForm(
+        "${json['name']}",
+        "${json['email']}",
+        "${json['mobileNo']}",
+        "${json['feedback']}"
+    );
   }
 
   // Method to make GET parameters.
