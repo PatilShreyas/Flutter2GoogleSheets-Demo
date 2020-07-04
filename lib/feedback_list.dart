@@ -11,7 +11,7 @@ class FeedbackListScreen extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: FeedbackListPage(title: "Hello"));
+        home: FeedbackListPage(title: "Responses"));
   }
 }
 
@@ -44,7 +44,7 @@ class _FeedbackListPageState extends State<FeedbackListPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Responses'),
+        title: Text(widget.title),
       ),
       body: ListView.builder(
         itemCount: feedbackItems.length,
