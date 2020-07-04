@@ -51,7 +51,7 @@ You can run this app on web [here](https://patilshreyas.github.io/Flutter2Google
     <th>Feedback Responses List</th> 
   </tr>
   <tr>
-    <td><img src="images/output.gif"/></td>
+    <td><img src="images/main.PNG"/></td>
     <td><img src="images/responses.PNG"/></td> 
   </tr>
 </table>
