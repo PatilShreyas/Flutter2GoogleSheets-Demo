@@ -12,6 +12,9 @@ A Demo application which stores User feedback from ***Flutter application*** int
 - It provides us interface using [***Google AppScript***](https://script.google.com/) so that we can do various types of operations on Google Spreadsheet. 
 - We can perform all types of operations like Reading/Inserting/Updating/Deleting using AppScript on Google Sheets. It's so much powerful and capable that we can even use Google Sheets as a backend of our application 📲.
 - Here we'll develop a sample flutter application, which simply takes user User Feedback, makes HTTP request to Google AppScript and AppScript then stores that feedback in Google Sheets.
+- In other screen, we'll show feedback responses fetched from Google sheets into the List.
+
+---
 
 This project is a starting point for a Flutter application.
 
@@ -36,12 +39,14 @@ samples, guidance on mobile development, and a full API reference.
 - [**AppScript Code**](code.gs) - Google AppScript code to deploy as Web app for interface between Flutter app and Google sheet.
 
 ## What's Happening? 🤔
-In flutter, when button is pressed, `HTTP` `GET` request is called on AppScript `URL` which retireves parameter from request and then appends row data in Google Sheets. Thus, data from flutter in inserted into Google Sheets.
+In flutter, when submit button is pressed, `HTTP` `POST` request is called on AppScript `URL` which retireves parameter from request and then appends row data in Google Sheets. Thus, data from flutter in inserted into Google Sheets.
+When `GET` request is sent to the same URL, it returns the List of feedback responses.
 
 ## ⚡️ Results
 You can run this app on web [here](https://patilshreyas.github.io/Flutter2GoogleSheets-Demo/demo/)
 <p float="center">
   <img src="images/output.gif" height="350"/>
+  <img src="images/responses.PNG" height="350"/>
   <img src="images/sheet.PNG" height="190"/>
 </p>
 
