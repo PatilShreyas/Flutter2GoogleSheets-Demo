@@ -65,12 +65,24 @@ class _MyHomePageState extends State<MyHomePage> {
         if (response == FormController.STATUS_SUCCESS) {
           // Feedback is saved succesfully in Google Sheets.
           _showSnackbar("Feedback Submitted");
+          nameController.clear();
+          emailController.clear();
+          mobileNoController.clear();
+          feedbackController.clear();
         } else {
           // Error Occurred while saving data in Google Sheets.
           _showSnackbar("Error Occurred!");
         }
       });
     }
+  }
+
+  bool isEmail(String email) {
+    bool emailValid = RegExp(
+            r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+        .hasMatch(email);
+
+    return emailValid;
   }
 
   // Method to show snackbar with 'message'.
@@ -83,7 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: Text(widget.title),
       ),
@@ -111,7 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       TextFormField(
                         controller: emailController,
                         validator: (value) {
-                          if (!value.contains("@")) {
+                          if (!isEmail(value)) {
                             return 'Enter Valid Email';
                           }
                           return null;
@@ -146,15 +158,20 @@ class _MyHomePageState extends State<MyHomePage> {
                     ],
                   ),
                 )),
-            RaisedButton(
+            MaterialButton(
+              elevation: 5,
               color: Colors.blue,
               textColor: Colors.white,
               onPressed: _submitForm,
               child: Text('Submit Feedback'),
             ),
-            RaisedButton(
-              color: Colors.lightBlueAccent,
-              textColor: Colors.black,
+            SizedBox(
+              height: 5,
+            ),
+            MaterialButton(
+              elevation: 5,
+              color: Colors.blue,
+              textColor: Colors.white,
               onPressed: () {
                 Navigator.push(
                     context,
