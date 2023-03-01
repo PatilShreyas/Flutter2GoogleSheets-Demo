@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_sheets_app/form_view.dart';
 
 import 'controller/form_controller.dart';
 import 'model/form.dart';
@@ -7,11 +8,11 @@ class FeedbackListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Feedback Responses',
+        title: 'Maklum Balas',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: FeedbackListPage(title: "Responses"));
+        home: FeedbackListPage(title: "Maklum balas"));
   }
 }
 
@@ -64,7 +65,7 @@ class _FeedbackListPageState extends State<FeedbackListPage> {
                 Icon(Icons.message),
                 Expanded(
                   child: Text(feedbackItems[index].feedback),
-                )
+                ),
               ],
             ),
           );
